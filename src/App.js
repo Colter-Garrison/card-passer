@@ -7,7 +7,7 @@ import ExecutePassButton from './ExecutePassButton';
 import { useCardContext } from './ContextProvider';
 
 function App() {
-  const { selectedCard } = useCardContext();
+  const { selectedCard, from, to, passCard, playerOneHand, playerTwoHand, playerThreeHand, deck } = useCardContext();
   // const [deck, setDeck] = useState(initialCards);
   // const [playerOneHand, setPlayerOneHand] = useState([]);
   // const [selectedCard, setSelectedCard] = useState();
@@ -48,8 +48,8 @@ function App() {
         {/* if the player names are numbers, that will make our life easier later because we can reuse numbers as arrays. Note that this will make our app brittle! */}
         <Player 
           // to={to} 
-          // player={1} 
-          // hand={playerOneHand} 
+          player={1} 
+          hand={playerOneHand} 
           // setFrom={setFrom} 
           // selectedCard={selectedCard} 
           // setTo={setTo} 
@@ -57,8 +57,8 @@ function App() {
         />
         <Player 
           // to={to} 
-          // player={2} 
-          // hand={playerTwoHand} 
+          player={2} 
+          hand={playerTwoHand} 
           // setFrom={setFrom}
           // selectedCard={selectedCard} 
           // setTo={setTo} 
@@ -66,15 +66,15 @@ function App() {
         />
         <Player
           // to={to} 
-          // player={3} 
-          // hand={playerThreeHand} 
+          player={3} 
+          hand={playerThreeHand} 
           // setFrom={setFrom} 
           // selectedCard={selectedCard} 
           // setTo={setTo} 
           // setSelectedCard={setSelectedCard} 
         />
         <CardList 
-          // cards={deck} 
+          cards={deck} 
           // selectedCard={selectedCard} 
           // setSelectedCard={setSelectedCard} 
           // setFrom={setFrom} 
@@ -84,7 +84,7 @@ function App() {
       <section>
         {
           selectedCard && <ExecutePassButton 
-            // passCard={passCard} from={from} to={to} selectedCard={selectedCard} 
+            passCard={passCard} from={from} to={to} selectedCard={selectedCard} 
           />
         }
       </section>
