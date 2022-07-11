@@ -1,8 +1,8 @@
 import './App.css';
-import initialCards from './cards-data';
+// import initialCards from './cards-data';
 import Player from './Player';
 import CardList from './CardList';
-import { useState } from 'react';
+// import { useState } from 'react';
 import ExecutePassButton from './ExecutePassButton';
 import { useCardContext } from './ContextProvider';
 

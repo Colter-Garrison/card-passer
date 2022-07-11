@@ -1,8 +1,8 @@
 import { createContext, useContext, useState } from 'react';
 import initialCards from './cards-data';
-import Player from './Player';
-import CardList from './CardList';
-import ExecutePassButton from './ExecutePassButton';
+// import Player from './Player';
+// import CardList from './CardList';
+// import ExecutePassButton from './ExecutePassButton';
 
 const cardContext = createContext();
 
@@ -52,9 +52,9 @@ export function ContextProvider({ children }) {
     setSelectedCard(null);
   }
 
-  return <cardContext.provider value={stateAndSetters}>
+  return <cardContext.Provider value={stateAndSetters}>
     {children}
-  </cardContext.provider>;
+  </cardContext.Provider>;
 }
 
 export function useCardContext() {
